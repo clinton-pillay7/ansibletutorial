@@ -1,0 +1,10 @@
+---
+- hosts: all
+  vars:
+    - username: clinton
+    - home: /home/clinton
+  tasks:
+    - name: Show IP
+      debug:
+        msg: "IP: {{ansible_default_ipv4.address}}"
+

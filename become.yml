@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+    - name: Print message
+      debug:
+        msg: Hello from elevated user
+
+#run with -kK flag (lower k for ssh password, uppercase k for sudo password)
+# ansible-playbook become.yml -u clinton -kK

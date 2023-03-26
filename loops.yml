@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks: 
+    - name: creates users files
+      file: 
+        path: /home/clinton/andtemp/{{ item }}
+        state: touch
+      loop: 
+        - sammy
+        - ericka
+        - brian
