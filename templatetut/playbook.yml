@@ -1,0 +1,10 @@
+---
+- name: Ansible template example
+  hosts: all
+  tasks:
+    - name: create a file on local
+      template:
+        src: "/home/clinton/Documents/ansible_scripts/templatetut/templates/my_app.conf.j2"
+        dest: "/home/clinton/Documents/ansible_scripts/templatetut/destination"
+      become: true
+
